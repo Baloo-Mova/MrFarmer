@@ -134,15 +134,16 @@ function manualPay($db, $usname, $usid, $purse, $sum, $sonfig_site){
 
 	# Заносим выплату
 	if(isset($_POST["purse"])){
-	$_POST["purse"] = $db->RealEscape($_POST['purse']);
+
 	
-		$purse = ViewPurse($_POST["purse"]);
-		$purse = $db->RealEscape($_POST['purse']);
+		$purse = $_POST["purse2"];
+		var_dump(url_decode($_POST["purse2"]));
 		$sum = intval($_POST["sum"]);
 		$sum = $db->RealEscape($_POST['sum']);
 		$val = "RUB";
 
-		if($purse !== false){
+
+		if(($purse[0] == "P") && strlen($purse) == 9){
 
 			// Проверяем на существующие заявки
 			$db->Query("SELECT * FROM db_payment WHERE user_id = '$usid' AND (status = '0' OR status = '1') ORDER BY id ");
@@ -199,7 +200,7 @@ function manualPay($db, $usname, $usid, $purse, $sum, $sonfig_site){
 <form id="cashout" action="" method="post">
 <div class="inp_wrap">
 <label>Аккаунт</label>
-<input class="input_text w340" type="text" required="" placeholder="PAYEER ID" value="" name="purse">
+<input class="input_text w340" type="text" required="" placeholder="PAYEER ID" name="purse2">
 </div>
 
 <div class="inp_wrap">

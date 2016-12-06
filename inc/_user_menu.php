@@ -55,7 +55,10 @@
 	<li><a href="/account/config.html"<?=(isset($_GET["sel"]) && strtolower($_GET["sel"]) == "config") ? 'class="selected"' : False; ?>>
 	<span class="fa fa-fw fa-cog"></span>
 	Настройки</a></li>
+
 	<li><a href="/account/exit.html"><span class="fa fa-fw fa-close"></span>Выход из профиля</a></li>
     <li><script type="text/javascript" src="http://wmrfast.com/blok.php?d=9aaz8c201NaNz0000011560BD00CD00effbfb000000000000z293z308242"></script></li>
-</ul>	
+
+</ul>
+
 	

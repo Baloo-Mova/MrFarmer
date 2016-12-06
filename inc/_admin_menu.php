@@ -14,7 +14,16 @@
 	<div class="field-gr"><a href="/?menu=helpmyadmin&sel=users">Список пользователей</a></div>
 	<div class="field-gr"><a href="/?menu=helpmyadmin&sel=sender">Массовая рассылка</a></div>
 	<div class="field-gr"><a href="/?menu=helpmyadmin&sel=jobs">Задания</a></div>
-	<div class="field-gr"><a href="/?menu=helpmyadmin&sel=serfing">Серфинг</a></div>
+	<!--<div class="field-gr"><a href="/?menu=helpmyadmin&sel=serfing">Серфинг</a></div>-->
+<?php
+if (isset($_SESSION['admin']))
+{
+	$db->Query("SELECT * FROM db_serfing WHERE status = '1' ORDER BY time_add DESC");
+	?>
+	<div class="field-gr"><a href="/?menu=helpmyadmin&sel=serfing_moder">Модераторская (<?php echo $db->NumRows(); ?>)</a></div>
+	<?php
+}
+?>
 	<div class="field-gr"><a href="/?menu=helpmyadmin&sel=payments">Список выплат</a></div>
 <div class="field-rd"><a href="/account/exit.html">Выход из профиля</a></div>
 <br />

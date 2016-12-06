@@ -19,9 +19,13 @@ class db{
 	\*======================================================================*/
 	public function __construct($host, $user, $pass, $base){
 		$this->Connect($host, $user, $pass, $base);
-		$this->query("SET NAMES 'cp1251'");
-		$this->query("SET CHARACTER SET 'cp1251'");
-	}
+		//$this->query("SET NAMES 'cp1251'");
+		//$this->query("SET CHARACTER SET 'cp1251'");
+
+        $this->query("set character_set_client='cp1251'");
+        $this->query("set character_set_results='cp1251'");
+        $this->query("set collation_connection='cp1251_general_ci'");
+    }
 	
 	/*======================================================================*\
 	Function:	Stats

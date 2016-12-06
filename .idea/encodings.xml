@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ajax/us-advservice.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/classes/_class.db.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/inc/_admin_menu.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/inc/_user_menu.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/index.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/js/functions.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/pages/_account.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/_admin.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/account/_config.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/pages/account/_serfing.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/pages/account/_serfing_add – копія.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/pages/account/_serfing_add.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/pages/account/_serfing_add.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/pages/account/_serfing_cabinet.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/account/_withdraw.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/admin/_config.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/admin/_payments.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/pages/admin/_serfing_moder.php" charset="windows-1251" />
   </component>
 </project>

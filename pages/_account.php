@@ -35,6 +35,11 @@ if(isset($_GET["sel"])){
 		case "insert": include("pages/account/_insert.php"); break; // Пополнение баланса
 		case "chat": include("pages/account/_chat.php"); break;
 		case "exit": include("exit.php"); break; // Выход
+
+
+        case "serfing": include("pages/account/_serfing.php"); break;
+        case "serfing_add": include("pages/account/_serfing_add.php"); break;
+        case "serfing_cabinet": include("pages/account/_serfing_cabinet.php"); break;
 				
 	# Страница ошибки
 	default: @include("pages/_404.php"); break;

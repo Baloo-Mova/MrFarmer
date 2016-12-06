@@ -2,11 +2,11 @@
 class config{
 
 	public $HostDB = "localhost";
-	public $UserDB = "";
+	public $UserDB = "root";
 	public $PassDB = "";
 	public $BaseDB = "";
 	
-	public $SYSTEM_START_TIME = 1480247528;
+	public $SYSTEM_START_TIME = ;
 	public $VAL = ".";
 	
 	# PAYEER 

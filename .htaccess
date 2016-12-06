@@ -6,6 +6,14 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
+RewriteRule ^account/serfing(/?)+$ index.php?menu=account&sel=serfing [L]
+RewriteRule ^account/serfing/edit/([0-9]+)(/?)+$ index.php?menu=account&sel=serfing_add&advedit=$1 [L]
+RewriteRule ^account/serfing/delete/([0-9]+)(/?)+$ index.php?menu=account&sel=serfing&delete=$1 [L]
+RewriteRule ^account/serfing/add(/?)+$ index.php?menu=account&sel=serfing_add [L]
+RewriteRule ^account/serfing/cabinet(/?)+$ index.php?menu=account&sel=serfing_cabinet [L]
+RewriteRule ^account/serfing/moder(/?)+$ index.php?menu=account&sel=serfing_moder [L]
+RewriteRule ^account/serfing/view/([0-9]+)(/?)+$ _serfing_view.php?view=$1 [L]
+
 # 
 RewriteRule ^index.html$ index.php [L]
 
@@ -64,3 +72,4 @@ RewriteRule ^competition(/?)+$ index.php?menu=competition [L]
 RewriteRule ^competition/list(/?)+$ index.php?menu=competition&list [L]
 RewriteRule ^competition(/?)+$ index.php?menu=account&sel=payment [L]
 RewriteRule ^account/polezno(/?)+$ index.php?menu=account&sel=polezno [L]
+

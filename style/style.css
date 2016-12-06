@@ -588,6 +588,21 @@ table {
 .admin_pay_table td{
     border: 1px solid #9c9c9c!important;
 }
+.hidden{
+    display: none !important;
+}
+.cattitle-new{
+    text-align: left;
+    padding: 4px 10px 5px 52px;
+    font: 12px Tahoma, Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    margin: 2px 0;
+    outline: none;
+
+    background-color: #774E33;
+}
 /*-----------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/
