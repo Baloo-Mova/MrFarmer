@@ -133,11 +133,11 @@ function manualPay($db, $usname, $usid, $purse, $sum, $sonfig_site){
 	// Выводим ошибки
 
 	# Заносим выплату
-	if(isset($_POST["purse"])){
+	if(isset($_POST["purse2"])){
 
 	
 		$purse = $_POST["purse2"];
-		var_dump(url_decode($_POST["purse2"]));
+
 		$sum = intval($_POST["sum"]);
 		$sum = $db->RealEscape($_POST['sum']);
 		$val = "RUB";
