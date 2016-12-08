@@ -192,14 +192,14 @@ if (isset($_POST['ask_title']))
    
     $db->query("UPDATE db_serfing SET `title` = '".$title."', `desc` = '".$desc."', `url` = '".$url."', `timer` = '".$timer."', `move` = '".$move."', `high` = '".$high."', `speed` = '".$speed."', `country` = '".$country."', `rating` = '".$rating."', `crev` = '".$crev."', `price` = '".$price."', `status` = '".$status."' WHERE id = '".$advedit."'");
     
-    if (isset($_SESSION['admin'])) 
+    /*if (isset($_SESSION['admin']))
     {
       header('Location: /account/serfing/moder'); 
     } 
     else
-    {
+    {*/
       header('Location: /account/serfing/cabinet'); 
-    }
+    //}
     
     exit();
   }

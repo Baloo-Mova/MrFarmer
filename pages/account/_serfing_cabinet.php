@@ -325,17 +325,22 @@ function payselect(id) {
          <div style="display: inline;" id="erase<?php echo $row['id']; ?>"><?php echo $row['view']; ?></div>
          
          </span>
-          <?php
-          if ($row['money'] == 0)
-          { 
-            ?><span class="scon-delete" title="Удалить ссылку" onclick="javascript:advevent(<?php echo $row['id']; ?>,4);"></span><?php
-          }
+         <?php
+           if ($row['money'] == 0)
+             {
           ?>
+            <span class="scon-delete" title="Удалить ссылку" onclick="javascript:advevent(<?php echo $row['id']; ?>,4);"></span>
+          <?php
+          }else {
+               ?>
 
-          <form action="" method="post" >
-              <input type="hidden" name="delete" value="<?php echo $row['id']; ?>">
-              <input type="submit" class="workcomp-new" title="Удалить ссылку и вернуть деньги">
-          </form>
+               <form action="" method="post">
+                   <input type="hidden" name="delete" value="<?php echo $row['id']; ?>">
+                   <input type="submit" class="workcomp-new" title="Удалить ссылку и вернуть деньги">
+               </form>
+               <?php
+           }
+               ?>
           <a class="scon-edit" href="/account/serfing/edit/<?php echo $row['id']; ?>" title="Редактировать ссылку"></a>
 
         </td>

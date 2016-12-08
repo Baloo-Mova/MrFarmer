@@ -140,8 +140,18 @@ if (isset($_POST['cnt']) && $_POST['cnt'] == $_SESSION['cnt'])
     //удаление модером
     case 11:
 
-    $db->query("DELETE FROM db_serfing WHERE id = '".$adv."'");
-    $db->query("DELETE FROM db_serfing_view WHERE ident = '".$adv."'"); 
+        $db->query("SELECT * FROM db_serfing WHERE id = '".$adv."'");
+        $serf_info = $db->FetchArray();
+        if($serf_info['money'] > 0){    //Если у обьявления есть деньги
+            $money = $serf_info['money'];
+            $db->Query("UPDATE db_users_b SET `money_b` = `money_b` + '".$money."' WHERE id = '".$_SESSION['user_id']."'"); // вернуть их пользователю
+
+            $db->query("DELETE FROM db_serfing WHERE id = '".$adv."'");
+            $db->query("DELETE FROM db_serfing_view WHERE ident = '".$adv."'");
+        }else{
+            $db->query("DELETE FROM db_serfing WHERE id = '".$adv."'");
+            $db->query("DELETE FROM db_serfing_view WHERE ident = '".$adv."'");
+        }
      
     exit('1'); 
               
