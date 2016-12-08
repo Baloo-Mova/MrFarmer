@@ -72,6 +72,9 @@ if (isset($_POST['cnt']) && isset($_POST['num']) && isset($_SESSION['view']) && 
 
       $db = new db($config->HostDB, $config->UserDB, $config->PassDB, $config->BaseDB);
       $db->Query("set names cp1251;");
+
+        $db->Query("SELECT * FROM db_config WHERE id = '1' LIMIT 1");
+        $config_site = $db->FetchArray();
      
       $db->query("SELECT * FROM  db_serfing WHERE id = '".$_SESSION['view']['id']."' and money >= price LIMIT 1"); 
    
@@ -91,10 +94,20 @@ if (isset($_POST['cnt']) && isset($_POST['num']) && isset($_SESSION['view']) && 
         
         $price = $result['price'];        
              
-        $pay_user = number_format($price - ($price*(10/100)), 2); //оплата пользователю
-        
+        //$pay_user = number_format($price - ($price*(10/100)), 2); //оплата пользователю
+
+        $pay_user = number_format($price - (($price * $config_site['percent_serfing']) / 100), 2); // Вычитаем у пользователя проценты
+        $pay_user_b = number_format($pay_user - (($pay_user * 30) / 100), 2); // оплата пользователю на баланс для покупок
+        $pay_user_p = $pay_user - $pay_user_b; // оплата пользователю на баланс для вывода
+        $pay_user_ref = $pay_user * 0.1; // оплата рефереру
+
         //зачисление денег за просмотр пользователю
-        $db->query("UPDATE db_users_b SET `money_b` = `money_b` + '".$pay_user."'	WHERE id = '".$_SESSION['user_id']."'");
+        $db->query("UPDATE db_users_b SET `money_b` = `money_b` + '".$pay_user_b."', `money_p` = `money_p` + '".$pay_user_p."'	WHERE id = '".$_SESSION['user_id']."'");
+
+        //зачисление денег за просмотр рефереру
+        $db->Query("SELECT referer_id FROM db_users_a WHERE id = '".$_SESSION['user_id']."'");
+        $user_info = $db->FetchArray();
+        $db->query("UPDATE db_users_b SET `money_b` = `money_b` + '".$pay_user_ref."'	WHERE id = '".$user_info['referer_id']."'");
           
         //записываем просмотр списываем бабло
         $db->query("UPDATE db_serfing SET `view` = `view` + '1', `money` = `money` - '".$price."'	WHERE id = '".$id."'");

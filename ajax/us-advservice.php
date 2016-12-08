@@ -154,7 +154,7 @@ if (isset($_POST['cnt']) && $_POST['cnt'] == $_SESSION['cnt'])
     
     if ($money <= 0) exit('YOU BAD CHEL )))'); 
      
-    if ($_SESSION['admin']) 
+    if (isset($_SESSION['admin']))
     { 
       $db->query("UPDATE db_serfing SET `money` = `money` + '".$money."' WHERE id = '".$adv."'"); 
       
@@ -162,19 +162,39 @@ if (isset($_POST['cnt']) && $_POST['cnt'] == $_SESSION['cnt'])
     } 
     else
     {
-      if ($users_info['money_b'] >= $money) 
-      { 
-           
-        $db->query("UPDATE db_serfing SET `money` = `money` + '".$money."' WHERE id = '".$adv."'");  
-     
-        $db->query("UPDATE db_users_b SET `money_b` = `money_b` - '".$money."'	WHERE id = '".$_SESSION['user_id']."'");
-    
-        exit('1'); 
-      } 
-      else
-      {
-        exit('NO MONEY');
+
+      if($_POST['pay_type'] == 1){ // Списать со счета для вывода
+          if ($users_info['money_p'] >= $money)
+          {
+
+              $db->query("UPDATE db_serfing SET `money` = `money` + '".$money."' WHERE id = '".$adv."'");
+
+              $db->query("UPDATE db_users_b SET `money_p` = `money_p` - '".$money."'	WHERE id = '".$_SESSION['user_id']."'");
+
+              exit('1');
+          }
+          else
+          {
+              exit('NO MONEY');
+          }
       }
+      if($_POST['pay_type'] == 2){ // Списать со счета для покупок
+          if ($users_info['money_b'] >= $money)
+          {
+
+              $db->query("UPDATE db_serfing SET `money` = `money` + '".$money."' WHERE id = '".$adv."'");
+
+              $db->query("UPDATE db_users_b SET `money_b` = `money_b` - '".$money."'	WHERE id = '".$_SESSION['user_id']."'");
+
+              exit('1');
+          }
+          else
+          {
+              exit('NO MONEY');
+          }
+      }
+
+
     } 
               
     break;

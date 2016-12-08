@@ -14,27 +14,27 @@
         <div class="why">
             <ul>
                  <li>
-                    <span class="fa"><img src="../images/icon/no_wish.png"/ alt="no_wish" title="no_wish"></span>
+                    <span class="fa"><img src="/images/icon/no_wish.png"/ alt="no_wish" title="no_wish"></span>
                     Никаких платежных балов и обязательных пополнений для вывода!
                 </li>
                 <li>
-                    <span class="fa"><img src="../images/icon/rezerv.png"/ alt="rezerv" title="rezerv"></span>
+                    <span class="fa"><img src="/images/icon/rezerv.png"/ alt="rezerv" title="rezerv"></span>
                     Пополнение резерва проекта за счет торговли на валютном рынке!
                 </li>
                 <li>
-                    <span class="fa"><img src="../images/icon/rost.png"/ alt="rost" title="rost"></span>
+                    <span class="fa"><img src="/images/icon/rost.png"/ alt="rost" title="rost"></span>
                     Реферальный доход от пополнений, серфинга и заданий!
                 </li>
                 <li>
-                    <span class="fa"><img src="../images/icon/mol.png"/ alt="mol" title="mol"></span>
+                    <span class="fa"><img src="/images/icon/mol.png"/ alt="mol" title="mol"></span>
                     Дополнительный зароботок - Серфинг и задания!
                 </li>
                 <li>
-                    <span class="fa"><img src="../images/icon/clear.png"/ alt="clear" title="clear"></span>
+                    <span class="fa"><img src="/images/icon/clear.png"/ alt="clear" title="clear"></span>
                     Автоматические выплаты на Payeer!
                 </li>
                 <li>
-                    <span class="fa"><img src="../images/icon/support.png"/ alt="support" title="support"></span>
+                    <span class="fa"><img src="/images/icon/support.png"/ alt="support" title="support"></span>
                     Общение пользователей и администрации в онлайн чате!
                 </li>
             </ul>

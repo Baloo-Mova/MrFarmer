@@ -36,6 +36,8 @@ if(isset($_GET["sel"])){
 		case "chat": include("pages/account/_chat.php"); break;
 		case "exit": include("exit.php"); break; // Выход
 
+        case "advpayeer": include("pages/account/_advpayeer.php"); break; // Пополнение баланса
+
 
         case "serfing": include("pages/account/_serfing.php"); break;
         case "serfing_add": include("pages/account/_serfing_add.php"); break;

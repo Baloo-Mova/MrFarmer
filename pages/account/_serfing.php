@@ -14,6 +14,9 @@ header("Content-Type: text/html; charset=windows-1251");
 $db->Query("SELECT * FROM db_users_a WHERE id = '".$_SESSION['user_id']."'");
 $users_info = $db->FetchArray();
 
+$db->Query("SELECT * FROM db_config WHERE id = '1'"); //Конфиг данные
+$data_c = $db->FetchArray();
+
 function GeoIpClient() 
 {
   $xml=@simplexml_load_file('http://ipgeobase.ru:7020/geo?ip='.$_SERVER["REMOTE_ADDR"]);
@@ -142,6 +145,7 @@ function fixed(p1, p2, p3)
     </div>
     <div class="silver-bk">
      <p style="text-align: center;">Зарабатывай, просматривая сайты рекламодателей</p>
+        <center><a href="/account/serfing/add" class="button-green-big button-green-big-new" style="margin-top:10px;">Разместить ссылку</a>&nbsp;<a href="/account/serfing/cabinet" class="button-green-big button-green-big-new" style="margin-top:10px;">Мои ссылки</a></center>
      <table class="work-serf">
       <?php
       $db->query("SELECT ident, time_add FROM db_serfing_view WHERE user_id = '".$_SESSION['user_id']."' and time_add + INTERVAL 24*60*60 SECOND > NOW()");
@@ -165,7 +169,10 @@ function fixed(p1, p2, p3)
           }
 
           $high = ($row['high']) ? 'serfimghigh' : 'serfimg';
-          $pay_user = number_format($row['price'] - $row['price'] * (10/100), 2); //оплата пользователю
+
+
+          $pay_user = number_format($row['price'] - (($row['price'] * $data_c['percent_serfing']) / 100), 2);//оплата пользователю
+
 
           if ($row['country'])
           {
@@ -217,7 +224,7 @@ function fixed(p1, p2, p3)
             <?php echo $row['title']; ?><br /><span class="desctext"><?php echo $row['desc']; ?></span>
            </td>
            <td class="normal" nowrap="nowrap" valign="top" style="width: 60px; text-align: right; padding-right: 10px;">
-            <span class="smoolgray" title="Осталось визитов">(<?php echo (int)($row['money']/$row['price']); ?>)</span>&nbsp;<span class="clickprice"><?php echo $pay_user; ?>&nbsp;баксов</span><br />
+            <span class="smoolgray" title="Осталось визитов">(<?php echo (int)($row['money']/$row['price']); ?>)</span>&nbsp;<span class="clickprice"><?php echo $pay_user; ?>&nbsp;монет</span><br />
             <?php if (isset($_SESSION['admin'])) { ?><a class="workcomp" href="/account/serfing/delete/<?php echo $row['id']; ?>" title="Удалить ссылку и вернуть деньги"></a><?php } ?>
             <!--a class="workevents" href="/account/wall/<?php echo $row['user_name']; ?>" title="Рекламодатель" target="_blank"></a-->
             <!--<a class="workvir" href="http://online.us.drweb.com/result/?url=<?php// echo $row['url']; ?>" title="Проверить ссылку на вирусы" target="_blank"></a>-->
@@ -232,8 +239,7 @@ function fixed(p1, p2, p3)
       }
       ?>
      </table>
-      <center><a href="/account/serfing/add" class="button-green-big" style="margin-top:10px;">Разместить ссылку</a></center>
-      <center><a href="/account/serfing/cabinet" class="button-green-big" style="margin-top:10px;">Мои ссылки</a></center>
+
     </div>
 
 </div>

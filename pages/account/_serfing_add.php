@@ -9,7 +9,7 @@ ini_set('display_errors', 1);
 */
 define('TIME', time());
 
-define('SERF_PRICE', 5); //минимальна€ стоимость просмотра
+define('SERF_PRICE', 10); //минимальна€ стоимость просмотра
 define('SERF_PRICE_TIMER', 0.2); //стоимость таймера
 define('SERF_PRICE_MOVE', 0.8); //стоимость последующего перехода на сайт
 define('SERF_PRICE_HIGH', 0.5); //стоимость выделени€ ссылки
@@ -427,10 +427,10 @@ function number_format(number, decimals, dec_point, thousands_sep) {
                 <td class="value">
                     <select class="val" name="ask_timer" onChange="PlanChange(this.form); return false;">
                         <option value="20">20 секунд</option>
-                        <option value="30">30 секунд&nbsp;&nbsp;(+ <?php echo SERF_PRICE_TIMER; ?> бак.)</option>
-                        <option value="40">40 секунд&nbsp;&nbsp;(+ <?php echo SERF_PRICE_TIMER*2; ?> бак.)</option>
-                        <option value="50">50 секунд&nbsp;&nbsp;(+ <?php echo SERF_PRICE_TIMER*3; ?> бак.)</option>
-                        <option value="60">60 секунд&nbsp;&nbsp;(+ <?php echo SERF_PRICE_TIMER*4; ?> бак.)</option>
+                        <option value="30">30 секунд&nbsp;&nbsp;(+ <?php echo SERF_PRICE_TIMER; ?> сер.)</option>
+                        <option value="40">40 секунд&nbsp;&nbsp;(+ <?php echo SERF_PRICE_TIMER*2; ?> сер.)</option>
+                        <option value="50">50 секунд&nbsp;&nbsp;(+ <?php echo SERF_PRICE_TIMER*3; ?> сер.)</option>
+                        <option value="60">60 секунд&nbsp;&nbsp;(+ <?php echo SERF_PRICE_TIMER*4; ?> сер.)</option>
                     </select>
                 </td>
                 <td class="service"></td>
@@ -440,7 +440,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
                 <td class="value">
                     <select class="val" name="ask_high" onChange="PlanChange(this.form); return false;">
                         <option value="0">Ќет</option>
-                        <option value="1">ƒа&nbsp;&nbsp;(+ <?php echo SERF_PRICE_HIGH; ?> бак.)</option>
+                        <option value="1">ƒа&nbsp;&nbsp;(+ <?php echo SERF_PRICE_HIGH; ?> сер.)</option>
                     </select>
                 </td>
                 <td class="service"></td>
@@ -450,7 +450,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
                 <td class="value">
                     <select class="val" name="ask_move" onChange="PlanChange(this.form); return false;">
                         <option value="0">Ќет</option>
-                        <option value="1">ƒа&nbsp;&nbsp;(+ <?php echo SERF_PRICE_MOVE; ?> бак.)</option>
+                        <option value="1">ƒа&nbsp;&nbsp;(+ <?php echo SERF_PRICE_MOVE; ?> сер.)</option>
                     </select>
                 </td>
                 <td class="service"></td>
@@ -473,7 +473,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
             <tr>
                 <td>—тоимость одного просмотра</td>
                 <td class="price" colspan="2">
-                <input type="text" name="linkprice" maxlength="5" value="" readonly="readonly" /> баксов.
+                <input type="text" name="linkprice" maxlength="5" value="" readonly="readonly" /> серебра.
                 </td>
             </tr>
         </tbody>

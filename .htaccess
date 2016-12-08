@@ -53,6 +53,9 @@ RewriteRule ^account/knb.html(/?)+$ index.php?menu=account&sel=knb [L]
 RewriteRule ^account/shop.html(/?)+$ index.php?menu=account&sel=shop [L]
 RewriteRule ^account/farm.html(/?)+$ index.php?menu=account&sel=farm [L]
 RewriteRule ^account/balance.html(/?)+$ index.php?menu=account&sel=balance [L]
+
+RewriteRule ^account/advpayeer.html(/?)+$ index.php?menu=account&sel=advpayeer [L]
+
 RewriteRule ^account/withdraw.html/([0-9]+)(/?)+$ index.php?menu=account&sel=withdraw&pay_id=$1 [L]
 RewriteRule ^account/withdraw.html(/?)+$ index.php?menu=account&sel=withdraw [L]
 RewriteRule ^account/referals.html(/?)+$ index.php?menu=account&sel=referals [L]

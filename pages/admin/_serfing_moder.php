@@ -277,12 +277,12 @@ function reportformactivate(dnum, dmode) {
           <?php
           if ($row['money'] == 0)
           {
-            ?><!--span class="scon-delete" title="Удалить ссылку" onclick="javascript:advevent(<?php echo $row['id']; ?>,4);"></span--><?php
+            ?><!--span class="scon-delete" title="Удалить ссылку" onclick="javascript:advevent(<?php// echo $row['id']; ?>,4);"></span--><?php
           }
           ?>
-          <!--span id="int<?php echo $row['id']; ?>" class="scon-speed-<?php echo $row['speed']; ?>" title="Изменить интервал показов" onclick="javascript:advevent(<?php echo $row['id']; ?>,5);"></span-->
-          <!--span class="scon-erase" title="Сброс статистики" onclick="javascript:advevent(<?php echo $row['id']; ?>,3);"></span-->
-          <a class="scon-edit" href="/account/serfing/edit/<?php echo $row['id']; ?>" title="Редактировать ссылку"></a>
+          <!--span id="int<?php// echo $row['id']; ?>" class="scon-speed-<?php// echo $row['speed']; ?>" title="Изменить интервал показов" onclick="javascript:advevent(<?php// echo $row['id']; ?>,5);"></span-->
+          <!--span class="scon-erase" title="Сброс статистики" onclick="javascript:advevent(<?php// echo $row['id']; ?>,3);"></span-->
+          <!--<a class="scon-edit" href="/account/serfing/edit/<?php// echo $row['id']; ?>" title="Редактировать ссылку"></a>-->
         </td>
         <td class="budget">
          <?php
@@ -335,7 +335,7 @@ function reportformactivate(dnum, dmode) {
 
  ?>
  <center>
- <a href="/account/serfing/add" class="button-green-big" style="margin-top:10px">Разместить ссылку</a>
+ <!--<a href="/account/serfing/add" class="button-green-big" style="margin-top:10px">Разместить ссылку</a>-->
 </center>
 </div>
 

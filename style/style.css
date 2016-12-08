@@ -603,6 +603,32 @@ table {
 
     background-color: #774E33;
 }
+.button-red-new{
+    line-height: 2.4;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    width: 112px;
+    height: 34px;
+    display: inline-block !important;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    background: url(img/b-r.png) no-repeat left bottom;
+    text-shadow: 1px 1px 1px #8d2418;
+}
+.payeer_submit{
+    font: 14px arial, tahoma, sans-serif !important;
+    color: #fff !important;
+    padding: 10px 10px !important;
+    text-align: center !important;
+    margin: 10px auto !important;
+    width: 200px !important;
+}
+.button-green-big-new{
+    display: inline-block !important;
+}
 /*-----------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/

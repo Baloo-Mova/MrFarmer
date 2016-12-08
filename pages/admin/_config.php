@@ -10,6 +10,8 @@ if(isset($_POST["admin"])){
 
 	$admin = $func->IsLogin($_POST["admin"]);
 	$pass = $func->IsLogin($_POST["pass"]);
+
+    $percent_serfing = intval($_POST["percent_serfing"]);
 	
 	
 	$ser_per_wmr = intval($_POST["ser_per_wmr"]);
@@ -74,6 +76,7 @@ if(isset($_POST["admin"])){
 		
 		admin = '$admin',
 		pass = '$pass',
+		percent_serfing = '$percent_serfing',
 		ser_per_wmr = '$ser_per_wmr',
 		ser_per_wmz = '$ser_per_wmz',
 		ser_per_wme = '$ser_per_wme',
@@ -117,6 +120,11 @@ if(isset($_POST["admin"])){
   <tr>
     <td><b>Стоимость 1 RUB (золотом):</b></td>
 	<td width="150" align="center"><input type="text" name="ser_per_wmr" value="<?=$data_c["ser_per_wmr"]; ?>" /></td>
+  </tr>
+
+  <tr bgcolor="#EFEFEF">
+    <td><b>% для пользователя - Серфинг (От 1 до 99):</b></td>
+    <td width="150" align="center"><input type="text" name="percent_serfing" value="<?=$data_c["percent_serfing"]; ?>" /></td>
   </tr>
   
   <tr bgcolor="#EFEFEF">

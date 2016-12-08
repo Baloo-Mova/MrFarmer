@@ -17,6 +17,9 @@ $users_info = $db->FetchArray();
 
 ?>
 <script>
+
+
+
 function getHTTPRequest()
 {
     var req = false;
@@ -100,6 +103,7 @@ function submitform(formnum)
         var field = document.forms['payform'+formnum].pay_order.value;
         var minsum = $('#minsum'+formnum).text();      
         var tm;
+        var pay_type = $(".payform_select_"+formnum).val();
         function hidemsg()
         {
             $('#entermsg'+formnum).fadeOut('slow');
@@ -143,16 +147,16 @@ function submitform(formnum)
         var rnote = document.forms['payform'+formnum].pay_adv.value;
         var rart = document.forms['payform'+formnum].pay_mode.value;
         var rcnt = document.forms['payform'+formnum].pay_cnt.value;
-        senddatacart(rnote, rart, rprice, rcnt);
+        senddatacart(rnote, rart, rprice, rcnt, pay_type);
         return true;
     }
     return false;
 }
 
-function senddatacart(rnote, rart, rprice, rcnt)
+function senddatacart(rnote, rart, rprice, rcnt, pay_type)
 {
     var myReq = getHTTPRequest();
-    var params = "adv="+rnote+"&use="+rart+"&price="+rprice+"&cnt="+rcnt;
+    var params = "adv="+rnote+"&use="+rart+"&price="+rprice+"&cnt="+rcnt+"&pay_type="+pay_type;
     function setstate()
     {
         if ((myReq.readyState == 4)&&(myReq.status == 200)) {
@@ -181,6 +185,7 @@ function senddatacart(rnote, rart, rprice, rcnt)
 }
 
 function hideserfaddblock(bname) {
+
     if (document.getElementById(bname).style.display == 'none')
         document.getElementById(bname).style.display = '';
     else
@@ -207,6 +212,37 @@ function reportformactivate(dnum, dmode) {
     document.getElementById('btns'+dnum).style.display = 'none';
     return false;
     }
+
+
+function getpayeerform(type, id, mysum, myid) {
+    if(type == 3){
+        $(".adv_type_button").css("cssText", "display: none !important;");
+        $(".payeer_"+id).html("<form method=\"POST\" action=\"/account/advpayeer.html\">"+
+                "<input type=\"hidden\" name=\"method\" value=\"payeer\">"+
+                "<input type=\"hidden\" name=\"sum\" value=\""+mysum+"\">"+
+                "<input type=\"hidden\" name=\"adv_id\" value=\""+myid+"\">"+
+                "<input type=\"submit\" class=\"payeer_submit\" name=\"pay\" value=\"Перейти к оплате счета\" />"+
+            "</form>");
+    }else{
+        $(".payeer_"+id).html("");
+        $(".adv_type_button").css("display", "block");
+    }
+}
+
+function payselect(id) {
+    $(".pay_order_"+id).css("display", "none");
+    $(".payform"+id).append("<center><select class=\"payform_select payform_select_"+id+"\" name=\"pay_type\"  " +
+        "onchange=\"javascript:getpayeerform(this.options[this.selectedIndex].value, id, document.getElementById('pay_adv_sum_"+id+"').value, "+id+")\">" +
+            "<option value=\"1\" selected>Счет для вывода</option>" +
+            "<option value=\"2\">Счет для покупок</option>" +
+            "<option value=\"3\">Payeer</option>" +
+        "</select>" +
+        "<span class=\"button-red-new adv_type_button\" title=\"Внести средства в бюджет площадки\" onclick=\"javascript:submitform("+id+");\">Оплатить</span>" +
+        "");
+}
+
+
+
 </script>
 
 <div class="text_right">
@@ -216,6 +252,10 @@ function reportformactivate(dnum, dmode) {
 	<div class="acc-title9">Мои ссылки</div>
 </div>
 <div class="silver-bk">
+
+    <center>
+        <a href="/account/serfing/add" class="button-green-big" style="margin-top:10px">Разместить ссылку</a>
+    </center>
  <?php
  $db->Query("SELECT * FROM db_serfing WHERE user_name = '".$_SESSION['user']."' ORDER BY time_add DESC");
   
@@ -260,7 +300,7 @@ function reportformactivate(dnum, dmode) {
         <td width="80%">
          <a href="<?php echo $row['url']; ?>" target="_blank"><?php echo $row['title']; ?><br>
           <span class="desctext"><?php echo $row['desc']; ?></span></a><br>
-         <span class="serfinfotext">№ <?php echo $row['id']; ?>&nbsp;&nbsp;Клик: <?php echo $row['price']; ?> баксов.&nbsp;&nbsp;Просмотров: 
+         <span class="serfinfotext">№ <?php echo $row['id']; ?>&nbsp;&nbsp;Клик: <?php echo $row['price']; ?> зол. монет.&nbsp;&nbsp;Просмотров:
          <div style="display: inline;" id="erase<?php echo $row['id']; ?>"><?php echo $row['view']; ?></div>
          
          </span>
@@ -299,11 +339,11 @@ function reportformactivate(dnum, dmode) {
        </tr>
        <tr id="serfadd<?php echo $row['id']; ?>" style="display: none">
         <td class="ext" colspan="3">
-         <form name="payform<?php echo $row['id']; ?>" class="pay-form" onkeypress="if (event.keyCode == 13) return false;">
+         <form name="payform<?php echo $row['id']; ?>" class="pay-form payform<?php echo $row['id']; ?>" onkeypress="if (event.keyCode == 13) return false;">
           <input name="pay_cnt" value="<?php echo $_SESSION['cnt']; ?>" type="hidden">
           <input name="pay_mode" value="12" type="hidden">
           <input name="pay_user" value="<?php echo $_SESSION['user_id']; ?>" type="hidden">
-          <input name="pay_adv" value="<?php echo $row['id']; ?>" type="hidden">Укажите сумму, которую вы хотите внести в бюджет рекламной площадки<br>(Минимум <span id="minsum<?php echo $row['id']; ?>"><?php echo $row['price']; ?></span> баксов)<input name="pay_order" maxlength="10" value="<?php echo number_format($row['price']*1000, 2, '.', ''); ?>" type="text"><center><span class="button-red" title="Внести средства в бюджет площадки" onclick="javascript:submitform(<?php echo $row['id']; ?>);">Оплатить</span></center></form>
+          <input name="pay_adv" value="<?php echo $row['id']; ?>" type="hidden">Укажите сумму, которую вы хотите внести в бюджет рекламной площадки<br>(Минимум <span id="minsum<?php echo $row['id']; ?>"><?php echo ($row['price'] * 10); ?></span> золота)<div class="pay_order_<?php echo $row['id']; ?>"> <input name="pay_order" maxlength="10" id="pay_adv_sum_<?php echo $row['id']; ?>"  value="<?php echo number_format($row['price']*10, 2, '.', ''); ?>" type="text"><center><span class="button-red adv_pay" title="Внести средства в бюджет площадки" onclick="javascript:payselect(<?php echo $row['id']; ?>);">Оплатить</span></div><div class="payeer_"<?php echo $row['id']; ?>> </div></center></form>
          <div id="entermsg<?php echo $row['id']; ?>" style="display: none"></div>
         </td>
        </tr>
@@ -319,10 +359,8 @@ function reportformactivate(dnum, dmode) {
  }
  
  ?>
- <center>
- <a href="/account/serfing/add" class="button-green-big" style="margin-top:10px">Разместить ссылку</a>
-</center>
+
 </div>
 
 </div>
- 	
+

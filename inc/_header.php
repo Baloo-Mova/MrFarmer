@@ -22,10 +22,10 @@
 			<div class="wrapper">
 				<div class="top">
 					<ul>
-					<li><a href="/" class="fa home topicons"><img src="../images/icon/home.png"/ alt="home" title="Главная"></a></li>
-					<li><a target="_blank" href="https://vk.com/mrfarmer" class="fa topicons"><img src="../images/icon/vk.png"/ alt="vk" title="Mr.Farmer в Контакте"></a></li>
-					<li><a target="_blank" href="https://www.facebook.com/mrfarmerbiz/" class="fa topicons"><img src="../images/icon/f.png"/ alt="f" title="Mr.Farmer в Фейсбуке"></a></li>
-					<li><a target="_blank" href="https://www.ok.ru/group/53248141820121" class="fa topicons"><img src="../images/icon/ok.png"/ alt="ok" title="Mr.Farmer в Одноклассниках"></a></li>
+					<li><a href="/" class="fa home topicons"><img src="/images/icon/home.png"/ alt="home" title="Главная"></a></li>
+					<li><a target="_blank" href="https://vk.com/mrfarmer" class="fa topicons"><img src="/images/icon/vk.png"/ alt="vk" title="Mr.Farmer в Контакте"></a></li>
+					<li><a target="_blank" href="https://www.facebook.com/mrfarmerbiz/" class="fa topicons"><img src="/images/icon/f.png"/ alt="f" title="Mr.Farmer в Фейсбуке"></a></li>
+					<li><a target="_blank" href="https://www.ok.ru/group/53248141820121" class="fa topicons"><img src="/images/icon/ok.png"/ alt="ok" title="Mr.Farmer в Одноклассниках"></a></li>
 					</ul>
 					<div class="right_lang">
 						
