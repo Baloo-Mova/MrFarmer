@@ -17,10 +17,13 @@
     <file url="file://$PROJECT_DIR$/js/functions.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/_account.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/_admin.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/pages/_index.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/pages/_signup.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/account/_advpayeer.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/account/_balance.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/account/_config.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/account/_jobs.php" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/pages/account/_referals.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/account/_serfing.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/account/_serfing_add.php" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/pages/account/_serfing_cabinet.php" charset="windows-1251" />

@@ -102,7 +102,7 @@ if (isset($_POST['cnt']) && isset($_POST['num']) && isset($_SESSION['view']) && 
         $pay_user_ref = $pay_user * 0.1; // оплата рефереру
 
         //зачисление денег за просмотр пользователю
-        $db->query("UPDATE db_users_b SET `money_b` = `money_b` + '".$pay_user_b."', `money_p` = `money_p` + '".$pay_user_p."'	WHERE id = '".$_SESSION['user_id']."'");
+        $db->query("UPDATE db_users_b SET `money_b` = `money_b` + '".$pay_user_b."', `money_p` = `money_p` + '".$pay_user_p."', `to_referer` = `to_referer` + '".$pay_user_ref."'	WHERE id = '".$_SESSION['user_id']."'");
 
         //зачисление денег за просмотр рефереру
         $db->Query("SELECT referer_id FROM db_users_a WHERE id = '".$_SESSION['user_id']."'");
