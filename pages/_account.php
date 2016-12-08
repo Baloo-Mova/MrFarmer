@@ -42,6 +42,8 @@ if(isset($_GET["sel"])){
         case "serfing": include("pages/account/_serfing.php"); break;
         case "serfing_add": include("pages/account/_serfing_add.php"); break;
         case "serfing_cabinet": include("pages/account/_serfing_cabinet.php"); break;
+
+        case "jobs": include("pages/account/_jobs.php"); break; // Задания
 				
 	# Страница ошибки
 	default: @include("pages/_404.php"); break;

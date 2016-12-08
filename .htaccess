@@ -76,3 +76,12 @@ RewriteRule ^competition/list(/?)+$ index.php?menu=competition&list [L]
 RewriteRule ^competition(/?)+$ index.php?menu=account&sel=payment [L]
 RewriteRule ^account/polezno(/?)+$ index.php?menu=account&sel=polezno [L]
 
+RewriteRule ^account/jobs(/?)+$ index.php?menu=account&sel=jobs [L]
+RewriteRule ^account/jobs/list(/?)+$ index.php?menu=account&sel=jobs&alljobs [L]
+RewriteRule ^account/jobs/add(/?)+$ index.php?menu=account&sel=jobs&add [L]
+RewriteRule ^account/jobs/save(/?)+$ index.php?menu=account&sel=jobs&add&save [L]
+RewriteRule ^account/jobs/stat(/?)+$ index.php?menu=account&sel=jobs&statuse [L]
+RewriteRule ^account/jobs/info(/?)+$ index.php?menu=account&sel=jobs&info [L]
+RewriteRule ^account/jobs/my(/?)+$ index.php?menu=account&sel=jobs&mylist [L]
+RewriteRule ^account/jobs/show/([0-9]+)(/?)+$ index.php?menu=account&sel=jobs&show=$1 [L]
+

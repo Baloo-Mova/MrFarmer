@@ -13,6 +13,7 @@
 	<div class="field-gr"><a href="/?menu=helpmyadmin&sel=rules">Правила</a></div>
 	<div class="field-gr"><a href="/?menu=helpmyadmin&sel=users">Список пользователей</a></div>
 	<div class="field-gr"><a href="/?menu=helpmyadmin&sel=sender">Массовая рассылка</a></div>
+
 	<div class="field-gr"><a href="/?menu=helpmyadmin&sel=jobs">Задания</a></div>
 	<!--<div class="field-gr"><a href="/?menu=helpmyadmin&sel=serfing">Серфинг</a></div>-->
 <?php

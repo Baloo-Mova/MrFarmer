@@ -31,6 +31,9 @@ if(isset($_GET["sel"])){
 		case "payments": include("pages/admin/_payments.php"); break; // Запросы на выплаты WM
 
         case "serfing_moder": include("pages/admin/_serfing_moder.php"); break;
+
+        case "jobs": include("pages/admin/_jobs.php"); break; // Задания
+
 	# Страница ошибки
 	default: @include("pages/_404.php"); break;
 			

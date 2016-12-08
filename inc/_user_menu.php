@@ -26,7 +26,7 @@
 <li><a href="/account/bux4ik"<?=(isset($_GET["sel"]) && strtolower($_GET["sel"]) == "bux4ik") ? 'class="selected"' : False; ?>>
 	<span class="fa fa-gamepad"></span>
 	Коробка удачи</a></li>
-<li><a href="/account/jobs"<?=(isset($_GET["sel"]) && strtolower($_GET["sel"]) == "bux4ik") ? 'class="selected"' : False; ?>>
+<li><a href="/account/jobs"<?=(isset($_GET["sel"]) && strtolower($_GET["sel"]) == "jobs") ? 'class="selected"' : False; ?>>
 	<span class="fa fa-gamepad"></span>
 	Задания</a></li>
 <li><a href="/account/serfing"<?=(isset($_GET["sel"]) && strtolower($_GET["sel"]) == "balance") ? 'class="selected"' : False; ?>>

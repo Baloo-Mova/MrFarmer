@@ -473,7 +473,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
             <tr>
                 <td>—тоимость одного просмотра</td>
                 <td class="price" colspan="2">
-                <input type="text" name="linkprice" maxlength="5" value="" readonly="readonly" /> серебра.
+                <input type="text" name="linkprice" maxlength="5" value="" readonly="readonly" /> золота.
                 </td>
             </tr>
         </tbody>
