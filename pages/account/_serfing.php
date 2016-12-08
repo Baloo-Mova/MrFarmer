@@ -137,12 +137,13 @@ function fixed(p1, p2, p3)
 
 
 <div class="text_right">
-
+    <div class="text_pages_top"></div>
+    <div class="text_pages_content">
 
     <link rel="stylesheet" href="/style/main.css" type="text/css" />
-    <div class="s-bk-lf">
+    <!--<div class="s-bk-lf">
         <div class="acc-title9">Серфинг</div>
-    </div>
+    </div>-->
     <div class="silver-bk">
      <p style="text-align: center;">Зарабатывай, просматривая сайты рекламодателей</p>
         <center><a href="/account/serfing/add" class="button-green-big button-green-big-new" style="margin-top:10px;">Разместить ссылку</a>&nbsp;<a href="/account/serfing/cabinet" class="button-green-big button-green-big-new" style="margin-top:10px;">Мои ссылки</a></center>
@@ -242,5 +243,8 @@ function fixed(p1, p2, p3)
 
     </div>
 
+
+    </div>
+    <div class="text_pages_bottom"></div>
 </div>
  	

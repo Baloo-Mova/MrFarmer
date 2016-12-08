@@ -227,11 +227,12 @@ function reportformactivate(dnum, dmode) {
 
 
 <div class="text_right">
-
+    <div class="text_pages_top"></div>
+    <div class="text_pages_content">
 <link rel="stylesheet" href="/style/main.css" type="text/css" />
-<div class="s-bk-lf">
+<!--<div class="s-bk-lf">
 	<div class="acc-title9">Модераторская</div>
-</div>
+</div>-->
 <div class="silver-bk">
  <?php
  $db->Query("SELECT * FROM db_serfing WHERE status = '1' ORDER BY time_add DESC");
@@ -330,7 +331,7 @@ function reportformactivate(dnum, dmode) {
  }
  else
  {
-   echo 'ссылок нет';
+   echo '<center><h1>Cсылок нет</h1></center>';
  }
 
  ?>
@@ -339,4 +340,7 @@ function reportformactivate(dnum, dmode) {
 </center>
 </div>
 
+
+</div>
+<div class="text_pages_bottom"></div>
 </div>

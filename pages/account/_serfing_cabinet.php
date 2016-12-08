@@ -247,10 +247,13 @@ function payselect(id) {
 
 <div class="text_right">
 
+    <div class="text_pages_top"></div>
+    <div class="text_pages_content">
+
 <link rel="stylesheet" href="/style/main.css" type="text/css" />
-<div class="s-bk-lf">
+<!--<div class="s-bk-lf">
 	<div class="acc-title9">Мои ссылки</div>
-</div>
+</div>-->
 <div class="silver-bk">
 
     <center>
@@ -362,5 +365,8 @@ function payselect(id) {
 
 </div>
 
+
+    </div>
+    <div class="text_pages_bottom"></div>
 </div>
 

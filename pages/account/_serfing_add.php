@@ -28,6 +28,9 @@ $users_info = $db->FetchArray();
 
 <div class="text_right">
 
+    <div class="text_pages_top"></div>
+    <div class="text_pages_content">
+
 <link rel="stylesheet" href="/style/main.css" type="text/css" />
 <?php
 
@@ -369,9 +372,9 @@ function number_format(number, decimals, dec_point, thousands_sep) {
         
 </script> 
 
-<div class="s-bk-lf">
+<!--<div class="s-bk-lf">
 	<div class="acc-title9">Добавить Серфинг</div>
-</div>
+</div>-->
 
 <div class="silver-bk">
     <p>Категорически запрещено размещение рекламных ссылок на ресурсы:</p>
@@ -559,5 +562,8 @@ else
  
 </div>
 
+
+</div>
+<div class="text_pages_bottom"></div>
 </div>
  	
