@@ -629,6 +629,23 @@ table {
 .button-green-big-new{
     display: inline-block !important;
 }
+.workcomp-new{
+    float: right !important;
+    display: block !important;
+    height: 16px !important;
+    width: 16px !important;
+    outline: none !important;
+    border: none !important;
+    margin: 0 1px !important;
+}
+.workcomp-new {
+    background: url(img/icon-comp.png) no-repeat left bottom !important;
+}
+.workcomp-new:hover{
+    cursor: pointer !important;
+    background-position: left top !important;
+}
+
 /*-----------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/

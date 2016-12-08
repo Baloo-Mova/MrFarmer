@@ -226,7 +226,7 @@ function fixed(p1, p2, p3)
            </td>
            <td class="normal" nowrap="nowrap" valign="top" style="width: 60px; text-align: right; padding-right: 10px;">
             <span class="smoolgray" title="Осталось визитов">(<?php echo (int)($row['money']/$row['price']); ?>)</span>&nbsp;<span class="clickprice"><?php echo $pay_user; ?>&nbsp;монет</span><br />
-            <?php if (isset($_SESSION['admin'])) { ?><a class="workcomp" href="/account/serfing/delete/<?php echo $row['id']; ?>" title="Удалить ссылку и вернуть деньги"></a><?php } ?>
+            <?php// if (isset($_SESSION['admin'])) { ?><!--<a class="workcomp" href="/account/serfing/delete/<?php// echo $row['id']; ?>" title="Удалить ссылку и вернуть деньги"></a>--><?php// } ?>
             <!--a class="workevents" href="/account/wall/<?php echo $row['user_name']; ?>" title="Рекламодатель" target="_blank"></a-->
             <!--<a class="workvir" href="http://online.us.drweb.com/result/?url=<?php// echo $row['url']; ?>" title="Проверить ссылку на вирусы" target="_blank"></a>-->
            </td>

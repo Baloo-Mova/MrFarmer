@@ -260,6 +260,24 @@ function payselect(id) {
         <a href="/account/serfing/add" class="button-green-big" style="margin-top:10px">Разместить ссылку</a>
     </center>
  <?php
+
+ if (isset($_POST['delete']))
+ {
+     $id = (int)$_POST['delete'];
+
+
+         $db->query("SELECT money, user_name FROM db_serfing WHERE id = '".$id."' LIMIT 1");
+
+         $result = $db->FetchArray();
+
+         $db->query("UPDATE db_users_b SET money_b = money_b + '".$result['money']."' WHERE user = '".$result['user_name']."'");
+
+         $db->query("DELETE FROM db_serfing WHERE id = '".$id."'");
+         $db->query("DELETE FROM db_serfing_view WHERE ident = '".$id."'");
+
+ }
+
+
  $db->Query("SELECT * FROM db_serfing WHERE user_name = '".$_SESSION['user']."' ORDER BY time_add DESC");
   
  if ($db->NumRows())
@@ -313,7 +331,13 @@ function payselect(id) {
             ?><span class="scon-delete" title="Удалить ссылку" onclick="javascript:advevent(<?php echo $row['id']; ?>,4);"></span><?php
           }
           ?>
+
+          <form action="" method="post" >
+              <input type="hidden" name="delete" value="<?php echo $row['id']; ?>">
+              <input type="submit" class="workcomp-new" title="Удалить ссылку и вернуть деньги">
+          </form>
           <a class="scon-edit" href="/account/serfing/edit/<?php echo $row['id']; ?>" title="Редактировать ссылку"></a>
+
         </td>
         <td class="budget">
          <?php

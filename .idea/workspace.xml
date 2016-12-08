@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a67bf44b-d531-4e2e-b3d2-12e9b8db6818" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/balans.php" afterPath="$PROJECT_DIR$/inc/balans.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/account/_serfing.php" afterPath="$PROJECT_DIR$/pages/account/_serfing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/account/_serfing_add.php" afterPath="$PROJECT_DIR$/pages/account/_serfing_add.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/account/_serfing_cabinet.php" afterPath="$PROJECT_DIR$/pages/account/_serfing_cabinet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/admin/_serfing_moder.php" afterPath="$PROJECT_DIR$/pages/admin/_serfing_moder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/style.css" afterPath="$PROJECT_DIR$/style/style.css" />
     </list>
     <ignored path="ferma.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,15 +35,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_serfing_cabinet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/account/_serfing_cabinet.php">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="249" column="4" selection-start-line="249" selection-start-column="4" selection-end-line="250" selection-end-column="36" />
-              <folding>
-                <marker date="1481217609131" expanded="true" signature="277:339" ph="SELECT * FRO... db_users_b" />
-                <marker date="1481217609131" expanded="true" signature="9884:9973" ph="SELECT * FRO... db_serfing" />
-              </folding>
+            <state relative-caret-position="490">
+              <caret line="644" column="31" selection-start-line="644" selection-start-column="31" selection-end-line="644" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,7 +48,7 @@
       <file leaf-file-name="_serfing_moder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/admin/_serfing_moder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
+            <state relative-caret-position="5661">
               <caret line="333" column="22" selection-start-line="333" selection-start-column="22" selection-end-line="333" selection-end-column="22" />
               <folding>
                 <marker date="1481217805665" expanded="true" signature="324:386" ph="SELECT * FRO... db_users_b" />
@@ -81,6 +78,64 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="1004" column="0" selection-start-line="1004" selection-start-column="0" selection-end-line="1004" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="balans.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inc/balans.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+              <folding>
+                <marker date="1481218879844" expanded="true" signature="49:92" ph="SELECT * FRO... db_users_b" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_serfing.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/account/_serfing.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3621">
+              <caret line="228" column="185" selection-start-line="228" selection-start-column="185" selection-end-line="228" selection-end-column="185" />
+              <folding>
+                <marker date="1481219522462" expanded="true" signature="264:326" ph="SELECT * FRO... db_users_a" />
+                <marker date="1481219522462" expanded="true" signature="376:414" ph="SELECT * FRO... db_config" />
+                <marker date="1481219522462" expanded="true" signature="1004:1072" ph="SELECT money... db_serfing" />
+                <marker date="1481219522462" expanded="true" signature="1130:1234" ph="UPDATE db_us... " />
+                <marker date="1481219522462" expanded="true" signature="1257:1300" ph="DELETE FROM " />
+                <marker date="1481219522462" expanded="true" signature="1320:1371" ph="DELETE FROM " />
+                <marker date="1481219522462" expanded="true" signature="4510:4644" ph="SELECT ident... db_serfing_view" />
+                <marker date="1481219522462" expanded="true" signature="4777:4873" ph="SELECT * FRO... db_serfing" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_serfing_cabinet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/account/_serfing_cabinet.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="336" column="95" selection-start-line="336" selection-start-column="95" selection-end-line="336" selection-end-column="95" />
+              <folding>
+                <marker date="1481220754983" expanded="true" signature="277:339" ph="SELECT * FRO... db_users_b" />
+                <marker date="1481220754983" expanded="true" signature="9962:10030" ph="SELECT money... db_serfing" />
+                <marker date="1481220754983" expanded="true" signature="10095:10199" ph="UPDATE db_us... " />
+                <marker date="1481220754983" expanded="true" signature="10225:10268" ph="DELETE FROM " />
+                <marker date="1481220754983" expanded="true" signature="10293:10344" ph="DELETE FROM " />
+                <marker date="1481220754983" expanded="true" signature="10367:10456" ph="SELECT * FRO... db_serfing" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -101,12 +156,10 @@
         <option value="$PROJECT_DIR$/inc/_footer.php" />
         <option value="$PROJECT_DIR$/inc/_header.php" />
         <option value="$PROJECT_DIR$/inc/_left_menu.php" />
-        <option value="$PROJECT_DIR$/inc/balans.php" />
         <option value="$PROJECT_DIR$/ajax/us-advservice.php" />
         <option value="$PROJECT_DIR$/_serfing_view.php" />
         <option value="$PROJECT_DIR$/ajax/us-fixedserf.php" />
         <option value="$PROJECT_DIR$/ajax/us-stepserf.php" />
-        <option value="$PROJECT_DIR$/style/style.css" />
         <option value="$PROJECT_DIR$/cron_job.php" />
         <option value="$PROJECT_DIR$/pages/account/_balance.php" />
         <option value="$PROJECT_DIR$/pages/account/_advpayeer.php" />
@@ -118,10 +171,12 @@
         <option value="$PROJECT_DIR$/inc/_admin_menu.php" />
         <option value="$PROJECT_DIR$/pages/admin/_jobs.php" />
         <option value="$PROJECT_DIR$/pages/account/_jobs.php" />
-        <option value="$PROJECT_DIR$/pages/account/_serfing.php" />
         <option value="$PROJECT_DIR$/pages/account/_serfing_add.php" />
-        <option value="$PROJECT_DIR$/pages/account/_serfing_cabinet.php" />
         <option value="$PROJECT_DIR$/pages/admin/_serfing_moder.php" />
+        <option value="$PROJECT_DIR$/inc/balans.php" />
+        <option value="$PROJECT_DIR$/pages/account/_serfing.php" />
+        <option value="$PROJECT_DIR$/pages/account/_serfing_cabinet.php" />
+        <option value="$PROJECT_DIR$/style/style.css" />
         <option value="$PROJECT_DIR$/classes/_class.config.php" />
       </list>
     </option>
@@ -184,7 +239,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -325,6 +379,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -399,18 +454,19 @@
       <workItem from="1481109646292" duration="20590000" />
       <workItem from="1481188017349" duration="11589000" />
       <workItem from="1481215379563" duration="485000" />
-      <workItem from="1481217267897" duration="681000" />
+      <workItem from="1481217267897" duration="760000" />
+      <workItem from="1481218862364" duration="2239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93692000" />
+    <option name="totallyTimeSpent" value="96010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2803838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2835821" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -464,13 +520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/admin/_payments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="77" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -686,24 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/balans.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <marker date="1481115679908" expanded="true" signature="49:92" ph="SELECT * FRO... db_users_b" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="629" column="37" selection-start-line="629" selection-start-column="37" selection-end-line="629" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cron_job.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -862,14 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="63" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/account/_farm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2533">
@@ -879,23 +902,6 @@
             <marker date="1480539203604" expanded="true" signature="184:230" ph="SELECT * FRO... db_config" />
             <marker date="1480539203604" expanded="true" signature="996:1416" ph="UPDATE db_us... " />
             <marker date="1480539203604" expanded="true" signature="1510:1561" ph="SELECT * FRO... db_users_b" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/account/_serfing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="145" column="13" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
-          <folding>
-            <marker date="1481217418894" expanded="true" signature="264:326" ph="SELECT * FRO... db_users_a" />
-            <marker date="1481217418894" expanded="true" signature="376:414" ph="SELECT * FRO... db_config" />
-            <marker date="1481217418894" expanded="true" signature="1004:1072" ph="SELECT money... db_serfing" />
-            <marker date="1481217418894" expanded="true" signature="1130:1234" ph="UPDATE db_us... " />
-            <marker date="1481217418894" expanded="true" signature="1257:1300" ph="DELETE FROM " />
-            <marker date="1481217418894" expanded="true" signature="1320:1371" ph="DELETE FROM " />
-            <marker date="1481217418894" expanded="true" signature="4510:4644" ph="SELECT ident... db_serfing_view" />
-            <marker date="1481217418894" expanded="true" signature="4777:4873" ph="SELECT * FRO... db_serfing" />
           </folding>
         </state>
       </provider>
@@ -922,24 +928,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/account/_serfing_cabinet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="249" column="4" selection-start-line="249" selection-start-column="4" selection-end-line="250" selection-end-column="36" />
-          <folding>
-            <marker date="1481217609131" expanded="true" signature="277:339" ph="SELECT * FRO... db_users_b" />
-            <marker date="1481217609131" expanded="true" signature="9884:9973" ph="SELECT * FRO... db_serfing" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin/_serfing_moder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
+        <state relative-caret-position="5661">
           <caret line="333" column="22" selection-start-line="333" selection-start-column="22" selection-end-line="333" selection-end-column="22" />
           <folding>
             <marker date="1481217805665" expanded="true" signature="324:386" ph="SELECT * FRO... db_users_b" />
             <marker date="1481217805665" expanded="true" signature="8577:8643" ph="SELECT * FRO... db_serfing" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inc/balans.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <marker date="1481218879844" expanded="true" signature="49:92" ph="SELECT * FRO... db_users_b" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1252">
+          <caret line="78" column="63" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/account/_serfing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3621">
+          <caret line="228" column="185" selection-start-line="228" selection-start-column="185" selection-end-line="228" selection-end-column="185" />
+          <folding>
+            <marker date="1481219522462" expanded="true" signature="264:326" ph="SELECT * FRO... db_users_a" />
+            <marker date="1481219522462" expanded="true" signature="376:414" ph="SELECT * FRO... db_config" />
+            <marker date="1481219522462" expanded="true" signature="1004:1072" ph="SELECT money... db_serfing" />
+            <marker date="1481219522462" expanded="true" signature="1130:1234" ph="UPDATE db_us... " />
+            <marker date="1481219522462" expanded="true" signature="1257:1300" ph="DELETE FROM " />
+            <marker date="1481219522462" expanded="true" signature="1320:1371" ph="DELETE FROM " />
+            <marker date="1481219522462" expanded="true" signature="4510:4644" ph="SELECT ident... db_serfing_view" />
+            <marker date="1481219522462" expanded="true" signature="4777:4873" ph="SELECT * FRO... db_serfing" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="1004" column="0" selection-start-line="1004" selection-start-column="0" selection-end-line="1004" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="644" column="31" selection-start-line="644" selection-start-column="31" selection-end-line="644" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/account/_serfing_cabinet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="336" column="95" selection-start-line="336" selection-start-column="95" selection-end-line="336" selection-end-column="95" />
+          <folding>
+            <marker date="1481220754983" expanded="true" signature="277:339" ph="SELECT * FRO... db_users_b" />
+            <marker date="1481220754983" expanded="true" signature="9962:10030" ph="SELECT money... db_serfing" />
+            <marker date="1481220754983" expanded="true" signature="10095:10199" ph="UPDATE db_us... " />
+            <marker date="1481220754983" expanded="true" signature="10225:10268" ph="DELETE FROM " />
+            <marker date="1481220754983" expanded="true" signature="10293:10344" ph="DELETE FROM " />
+            <marker date="1481220754983" expanded="true" signature="10367:10456" ph="SELECT * FRO... db_serfing" />
           </folding>
         </state>
       </provider>
